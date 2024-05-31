@@ -12,7 +12,7 @@ const APP_SECRET = process.env.APP_SECRET
 const REDIRECT_URI = 'https://api.dannteam.com/callback'
 
 app.get('/', (req, res) => {
-    res.render('login')
+    res.sendFile(__dirname + "/views/login.ejs")
 })
 
 app.get('/auth', (req, res) => {
